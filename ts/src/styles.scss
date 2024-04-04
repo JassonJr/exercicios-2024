@@ -2,14 +2,16 @@
 * {
     margin: 0;
     padding: 0;
-  }
-
-li {
-    list-style: none;
+    li {
+        list-style: none;
+    }
 }
 
 .sidebar {
     display: inline-block;
+    position: fixed;
+    padding: 0;
+    //max-width: fit-content;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     height: 100vh;
 
@@ -51,6 +53,82 @@ li {
                 width: 5px;
                 height: 34px;
                 background: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
+            }
+        }
+    }
+}
+
+main {
+    padding-left: 220px;
+}
+header {
+    display: flex;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #FDF1EB;
+
+    .header-title {
+        color: #725C5C;
+        font-family: "Roboto";
+        p {
+            font-size: 14px;
+            line-height: 16px;
+        }
+        h3 {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 25px;
+        }
+    }
+    .lang-button {
+        width: 97px; 
+        height: 34px;
+        border: 1px solid #CCCCCC;
+        border-radius: 3px;
+        font-family: "Roboto";
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .profile {
+        width: fit-content;
+        position: relative;
+        display: flex;
+        gap: 7px;
+
+        font-family: "Quicksand";
+        text-align: right;
+        color: #333333;
+
+        h5 {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17.5px;
+        }
+        p {
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        img {
+            border-radius: 50%;
+        }
+
+        div {
+            &::after {
+                content: "2";
+                color: white;
+                font-size: 10px;
+                text-align: center;
+                background-color: red;
+                position: absolute;
+                top: -3px;
+                right: -3px;
+                width: 12px;
+                border-radius: 50%;
             }
         }
     }
