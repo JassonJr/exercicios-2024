@@ -7,6 +7,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+/*
 h1,
 h3,
 h4,
@@ -220,7 +222,7 @@ svg#clouds {
   width: 1920px;
 }
 
-/* Responsive Styles */
+//Responsive Styles 
 @media screen and (max-width: 767px) {
   .card-container > *:not(.circle-link) ,
   .terminal {
@@ -256,4 +258,4 @@ svg#clouds {
   h2, a {
     font-size: 12px;
   }
-}
+}*/
