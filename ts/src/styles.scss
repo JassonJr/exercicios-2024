@@ -138,7 +138,7 @@ main {
         font-family: "Roboto";
         padding: 20px 43px;
 
-        h4 {
+        .card-header {
             color: #4E4E4E;
             font-weight: 500;
             size: 20px;
@@ -218,9 +218,13 @@ main {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
-                -webkit-line-clamp: 3; /* Adjust the number of lines to show */
+                -webkit-line-clamp: 5; /* Adjust the number of lines to show */
                 -webkit-box-orient: vertical;
               }
+
+            .hidden {
+                display: none;
+            }  
         }
     }
 }
