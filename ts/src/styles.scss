@@ -8,14 +8,16 @@ $gradient: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
         list-style: none;
     }
 }
-
+body {
+    position: relative;
+}
 .sidebar {
     display: inline-block;
     position:absolute;
     padding: 0;
     //max-width: fit-content;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    height:190vh;
+    height:100%;
 
     h1 {
         padding: 19px 0 19px 0;
