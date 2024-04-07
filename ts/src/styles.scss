@@ -245,6 +245,15 @@ main {
                 h3,h4 {
                     color: #ED7839;
                 }
+
+                .summary {
+                    font-family: "Quicksand";
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 22px;
+                    letter-spacing: 2%;
+                    color: #5C5C5C;
+                }
                 .create-topic {
                     padding: 15px;
                     display: flex;
@@ -482,13 +491,6 @@ main {
                 display: -webkit-box;
                 -webkit-line-clamp: 5; /* Adjust the number of lines to show */
                 -webkit-box-orient: vertical;
-
-                font-family: "Quicksand";
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 22px;
-                letter-spacing: 2%;
-                color: #5C5C5C;
             }
             .btn-show-more {
                 font-family: "Quicksand";
