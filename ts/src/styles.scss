@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+$gradient: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
+
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +28,7 @@
         text-align: center;
 
         color: #FDF1EB;
-        background: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
+        background: $gradient;
     }
 
     li {
@@ -220,6 +222,123 @@ main {
             
             .content-card {
                 padding: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h3,h4 {
+                    color: #ED7839;
+                }
+                h3 {
+                    font-family: "Roboto";
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+
+                span {
+                    font-family: "Quicksand";
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 19px;
+                    text-align: center;
+                    width: 80ch;
+                    margin-bottom: 14px;
+                }
+                .icons {
+                    margin-top: 27px;
+                    margin-bottom: 35px;
+                }
+                .btn-create-topic {
+                    position: relative;
+                    
+                    padding: 9px 13px;
+                    border-radius: 4px;
+                    
+                    color: white;
+                    background: $gradient;
+                    box-shadow: 0px 2px 2px 0px #0000003D, 0px 0px 2px 0px #0000001F;
+                    
+                    display: flex;
+                    gap: 6px;
+                    margin-bottom: 15px;
+                    
+                    //decoração do botão de criar tópicos
+                    &::before {
+                        content: "";
+                        width: 1027px;
+                        height: 1px;
+                        background-color: #e7e7e7;
+                        position: absolute;
+                        z-index: -1;
+                        top: 50%;
+                        left: -450px;
+                    }
+                }
+                .topic-card {
+                    font-family: "Quicksand";
+                    width: 95%;
+                    margin-bottom: 17px;
+                    //padding: 17px 24px;
+                    border: 1px solid #E7E7E7;
+                    box-shadow: 0px 0px 8px 0px #0000001F;
+                    
+                    .ops-topic-subject {
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                    h5 {
+                        margin-top: 3px;
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 15px;
+                        color: #5C5C5C;
+                    }
+                    p {
+                        margin-top: 10px;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 17.5px;
+                        color: #4D4D4D;
+                    }
+                    .comments-btn-group {
+                        margin-top: 11px;
+                        ul {
+                            display: flex;
+                            align-items: center;
+                            gap: 15px;
+
+                            .like-btn {
+                                border-radius: 4px;
+                                padding: 2px 10px;
+                                background-color: #ED7839;
+                            }
+                        }
+                    }
+                }
+                .topic {
+                    padding: 17px 24px;
+                }
+                .answered-topic {
+                    h5 {
+                        font-weight: 700;
+                    }
+                    .comments-container {
+                        .comment-header {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                        .comment {
+                            padding: 17px 24px;
+                            border-top: 1px solid #E7E7E7;
+                        }
+                        .comment:nth-child(odd) {
+                            background: #F8F8F8;
+                        }
+                    }
+                    
+                } 
             }
             .collapsed {
                 overflow: hidden;
