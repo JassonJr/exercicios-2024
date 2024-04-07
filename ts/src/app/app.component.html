@@ -67,7 +67,7 @@
             </div>
           </section>
           <section class="content">
-            <img src="../assets/img/video.png" width="783" height="439" alt="Video Preview">
+            <img src="../assets/img/video.png" width="670" height="399" alt="Video Preview">
             <div class="detalhes">
               <h4 class="card-header">Detalhes</h4>
               <div class="textod scrollobj">
@@ -104,36 +104,43 @@
           <section class="card">
             <h4 class="card-header">Discussões</h4>
             <div class="content-card">
-              <h3>Compartilhe suas ideias ou duvidas com os autores!</h3>
-              <div class="icons">
-                <img src="../assets/img/icone1.svg" alt="Icone 1">
-                <img src="../assets/img/icone2.svg" alt="Icone 2">
-                <img src="../assets/img/icone3.svg" alt="Icone 3">
+              <div class="create-topic" [ngClass]="{ hidden: showForm }">
+                <h3>Compartilhe suas ideias ou duvidas com os autores!</h3>
+                <div class="icons">
+                  <img src="../assets/img/icone1.svg" alt="Icone 1">
+                  <img src="../assets/img/icone2.svg" alt="Icone 2">
+                  <img src="../assets/img/icone3.svg" alt="Icone 3">
+                </div>
+                <span>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</span>
+    
+                <a class="btn-create-topic" (click)="toggleForm()">
+                  <img src="../assets/img/criar-icon.svg" alt="">
+                  criar tópico
+                </a>
               </div>
-              <span>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</span>
-  
-              <a class="btn-create-topic" (click)="toggleForm()">
-                <img src="../assets/img/criar-icon.svg" alt="">
-                criar tópico
-              </a>
 
-              <div class="form" [ngClass]="{ hidden: !showForm }">
+              <div class="form-container" [ngClass]="{ hidden: !showForm }">
                 <p class="topic-title">
                   Tem uma dúvida ou sugestão? Compartilhe seu feedback com os
                   autores!
                 </p>
                 <form class="form">
-                  <label for="assunto" class="form-subject-text">Assunto</label>
+                  <label for="assunto" class="form-subject">Assunto</label>
                   <input type="text" name="assunto" class="subject" placeholder="Defina um tópico sucinto para notificar os autores..."/>
-                  <label for="conteudo" class="form-subject-text">Conteúdo</label>
-                  <textarea name="conteudo" class="form-textarea"></textarea>
-                  <div class="line-topic"></div>
-                  <button class="submit" (click)="submitForm($event)">Enviar</button>
+                  <label for="conteudo" class="form-subject">Conteúdo</label>
+                  <div class="message-container">
+                    <textarea name="conteudo" class="form-textarea"></textarea>
+                    <div class="button-container">
+                      <span class="detail-bar"></span>
+                      <button class="submit" (click)="submitForm($event)">Enviar</button>
+                    </div>
+                  </div>
                 </form>
-              </div>
-              <div class="feedback" [ngClass]="{ hidden: !topicFeedback }">
-                <p class="card-check-text">Aguardando feedback dos autores</p>
-                <a  class="card-check-edit" (click)="toggleFeedback()">Editar tópico</a>
+                <div class="feedback" [ngClass]="{ hidden: !topicFeedback }">
+                  <img src="../assets/img/feedback-check.svg" alt="icone de verificação">
+                  <p class="feedback-text">Aguardando feedback dos autores</p>
+                  <a  class="topic-edit" (click)="toggleFeedback()">Editar tópico</a>
+                </div>
               </div>
 
               <!-- comentários -->

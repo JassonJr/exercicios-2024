@@ -31,7 +31,7 @@ export class AppComponent {
   }
   //mostra a mensagem esperada após o formulário ser enviado
   toggleFeedback() {
-    this.showForm = !this.showForm;
+    //this.showForm = !this.showForm;
     this.topicFeedback = !this.topicFeedback;
   }
 
